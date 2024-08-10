@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "practice-terraform"
+version = "0.1.0"
+description = ""
+authors = ["noelbird <lduldu00228@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+setuptools = "^72.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
