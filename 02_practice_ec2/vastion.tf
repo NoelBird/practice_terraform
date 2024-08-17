@@ -1,6 +1,6 @@
 resource "aws_eip" "bastion" {
   instance = aws_instance.bastion.id
-  vpc      = true
+  domain      = "vpc"
   tags = {
     Name = "${var.project_name}-${var.environment}-bastion-eip"
   }

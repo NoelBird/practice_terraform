@@ -30,7 +30,7 @@ resource "aws_nat_gateway" "nat_gateway" {
 }
 
 resource "aws_eip" "nat_gateway" {
-  vpc        = true
+  domain     = "vpc"
   depends_on = [aws_internet_gateway.igw]
 
   tags = {

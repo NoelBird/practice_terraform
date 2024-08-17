@@ -5,6 +5,14 @@ terraform {
       version = "~> 5.0"
     }
   }
+  backend "s3" {
+    bucket = "noelbird-terraform-backend"
+    dynamodb_table = "noelbird-terraform-backend-lock"
+    encrypt = true
+    key = "terraform.tfstate"
+    profile = "devops"
+    region = "ap-northeast-2"
+  }
 }
 
 provider "aws" {
